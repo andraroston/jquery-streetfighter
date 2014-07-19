@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$(".ryu").mouseenter(function(){
 		$(".ryu-still").hide();
 		$(".ryu-ready").show();
@@ -24,6 +25,16 @@ $(document).ready(function() {
 	.mouseup(function() {
 			$(".ryu-throwing").hide();
 			$(".ryu-ready").show();
+	});
+	$("body").keydown(function(event){
+		if(event.keyCode == 88) {
+			$(".ryu").hide();
+			$(".ryu-cool").show();
+		}
+	});
+	$("body").keyup(function(){
+		$(".ryu-cool").hide();
+		$(".ryu").show();
 	});
 });
 
